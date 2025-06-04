@@ -1,0 +1,68 @@
+<section>
+  <div class="container">
+    <div
+      class="input-group flex-nowrap search mx-auto animate__animated animate__delay-1s animate__fadeInDown"
+    >
+      <input
+        [(ngModel)]="search"
+        (input)="getBookBySearch(search)"
+        type="search"
+        class="form-control shadow border-0 border-bottom z-0"
+        placeholder="Search By Book Name"
+        aria-label="Username"
+        aria-describedby="addon-wrapping"
+      />
+    </div>
+
+    <div class="mt-5">
+      <div class="row g-3">
+        @for (book of bookList; track book.id) {
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="p-4 shadow hover-box rounded-1 h-100 d-flex flex-column">
+            <div class="shadow">
+              <img
+                [src]="book.formats['image/jpeg']"
+                class="w-100"
+                height="300px"
+                [alt]="book.title"
+              />
+            </div>
+            <div class="mt-4">
+              <h5>{{ book.title.split(" ", 5).join(" ") }}</h5>
+              <p class="fs-6 fw-lighter">{{ book.authors[0].name }}</p>
+            </div>
+            <button
+              [routerLink]="['/Details', book.id]"
+              class="btn btn-primary rounded-5 shadow mt-auto"
+            >
+              <i class="fa-solid fa-heart me-1"></i>Review
+            </button>
+          </div>
+        </div>
+        }
+      </div>
+      <div class="mt-5 text-center">
+        <button
+          class="btn btn-danger"
+          (click)="pervPage()"
+          (click)="decrement()"
+        >
+          perv
+        </button>
+        <span class="mx-3">{{ counter }}</span>
+        <button
+          class="btn btn-success"
+          (click)="nextPage()"
+          (click)="increment()"
+        >
+          next
+        </button>
+
+        <!-- 
+         <i class="fa-solid cursor fa-angle-left" (click)="pervPage()"></i>
+        <span class="mx-4">1</span>
+        <i class="fa-solid cursor fa-angle-right" (click)="nextPage()"></i> -->
+      </div>
+    </div>
+  </div>
+</section>

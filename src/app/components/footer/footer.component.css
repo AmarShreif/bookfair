@@ -1,0 +1,25 @@
+ul li {
+  list-style: none;
+  margin: 10px 0;
+  a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s;
+    &:hover {
+      color: #09c;
+    }
+  }
+}
+
+.arrow-move {
+  animation: moveSide 0.5s infinite alternate ease-in-out;
+}
+
+@keyframes moveSide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}

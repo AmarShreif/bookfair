@@ -1,0 +1,35 @@
+.nav-item {
+  margin: 0 5px;
+}
+
+.navbar-nav .nav-item {
+  .nav-link {
+    position: relative;
+    padding: 0 !important;
+    margin-inline: 10px;
+  }
+
+  .nav-link::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: #0d5eff;
+    transition: all 0.5s;
+  }
+
+  .nav-link:hover {
+    color: #0d5eff;
+    &::before {
+      width: 90%;
+    }
+  }
+  .active {
+    color: #0d5eff;
+    &::before {
+      width: 90%;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+<section>
+  <div class="container">
+    <div
+      class="input-group flex-nowrap search mx-auto animate__animated animate__delay-1s animate__fadeInDown w-75"
+    >
+      <input
+        [(ngModel)]="search"
+        (input)="getBookBySearch(search)"
+        type="search"
+        class="form-control shadow border-0 border-bottom z-0"
+        placeholder="Search By Book Name"
+        aria-label="Username"
+        aria-describedby="addon-wrapping"
+      />
+    </div>
+    <h2 class="text-center pt-5">Collections Book</h2>
+    <div class="w-100">
+      <swiper-container
+        class="swiper-container1 mx-auto"
+        pagination="true"
+        effect="cube"
+        grab-cursor="true"
+        cube-effect-shadow="true"
+        cube-effect-slide-shadows="true"
+        cube-effect-shadow-offset="20"
+        cube-effect-shadow-scale="0.94"
+        autoplay-delay="3500"
+        autoplay-display-on-interaction="false"
+      >
+        <swiper-slide class="swiper-slide1">
+          <img
+            src="/images/sports-J3RQVAWG.jpg"
+            class="d-block rounded-3 w-100 position-relative h-100"
+          />
+          <div class="position-absolute text-white ms-3 info-img">
+            <p class="fs-5 fw-bolder">Sports Books</p>
+            <button
+              routerLink="/all Book"
+              class="btn btn-outline-primary fs-5 fw-bolder"
+            >
+              <i class="fa-solid fa-eye"></i> View Collection
+            </button>
+          </div>
+        </swiper-slide>
+        <swiper-slide class="swiper-slide1">
+          <img
+            src="/images/drama-XOEZPCQT.jpg"
+            class="d-block rounded-3 w-100 h-100"
+          />
+          <div class="position-absolute text-white ms-3 info-img">
+            <p class="fs-5 fw-bolder">Drama And Suspense Books</p>
+            <button
+              routerLink="/all Book"
+              class="btn btn-outline-primary fs-5 fw-bolder"
+            >
+              <i class="fa-solid fa-eye"></i> View Collection
+            </button>
+          </div>
+        </swiper-slide>
+        <swiper-slide class="swiper-slide1">
+          <img
+            src="/images/police-H4DEQC5G.webp"
+            class="d-block rounded-3 w-100 h-100"
+          />
+          <div class="position-absolute text-white ms-3 info-img">
+            <p class="fs-5 fw-bolder">Detective Books</p>
+            <button
+              routerLink="/all Book"
+              class="btn btn-outline-primary fs-5 fw-bolder"
+            >
+              <i class="fa-solid fa-eye"></i> View Collection
+            </button>
+          </div>
+        </swiper-slide>
+        <swiper-slide class="swiper-slide1">
+          <img
+            src="/images/history-ZADF7EQX.jpeg"
+            class="d-block rounded-3 w-100 h-100"
+          />
+          <div class="position-absolute text-white ms-3 info-img">
+            <p class="fs-5 fw-bolder">History Books</p>
+            <button
+              routerLink="/all Book"
+              class="btn btn-outline-primary fs-5 fw-bolder"
+            >
+              <i class="fa-solid fa-eye"></i> View Collection
+            </button>
+          </div>
+        </swiper-slide>
+        <swiper-slide class="swiper-slide1">
+          <img
+            src="/images/police-H4DEQC5G.webp"
+            class="d-block rounded-3 w-100 h-100"
+          />
+          <div class="position-absolute text-white ms-3 info-img">
+            <p class="fs-5 fw-bolder">Detective Books</p>
+            <button
+              routerLink="/all Book"
+              class="btn btn-outline-primary fs-5 fw-bolder"
+            >
+              <i class="fa-solid fa-eye"></i> View Collection
+            </button>
+          </div>
+        </swiper-slide>
+        <swiper-slide class="swiper-slide1">
+          <img
+            src="/images/drama-XOEZPCQT.jpg"
+            class="d-block rounded-3 w-100 h-100"
+          />
+          <div class="position-absolute text-white ms-3 info-img">
+            <p class="fs-5 fw-bolder">Drama And Suspense Books</p>
+            <button
+              routerLink="/all Book"
+              class="btn btn-outline-primary fs-5 fw-bolder"
+            >
+              <i class="fa-solid fa-eye"></i> View Collection
+            </button>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+</section>

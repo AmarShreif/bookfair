@@ -1,0 +1,35 @@
+<section>
+  <div class="container">
+    <div class="row shadow-lg dis g-5">
+      <div class="col-md-6">
+        <div>
+          <img
+            [src]="detailsProducts.formats['image/jpeg']"
+            class="w-75 d-block mx-auto mt-2"
+            [alt]="detailsProducts.title"
+          />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="text-center pb-4">
+          <h2>{{ detailsProducts.title }}</h2>
+          <h6 class="fw-light">{{ detailsProducts.authors[0].name }}</h6>
+        </div>
+        <h5>Languages : {{ detailsProducts.languages }}</h5>
+        <h5>Subjects :</h5>
+        @for (subject of detailsProducts.subjects; track $index) {
+        <p>{{ subject }}</p>
+        }
+        <h5>Book Shelves :</h5>
+        @for (bookShelves of detailsProducts.bookshelves; track $index) {
+        <p>{{ bookShelves }}</p>
+        }
+
+        <h5>Read Online:</h5>
+        <a [href]="detailsProducts.formats['text/html']" target="_blank"
+          >{{ detailsProducts.formats["application/rdf+xml"] }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

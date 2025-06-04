@@ -1,0 +1,32 @@
+.dis2 {
+  margin-top: 70px;
+}
+.search {
+  padding-top: 100px;
+  width: 85%;
+}
+.ms-6 {
+  margin-left: 100px;
+  margin-top: 0 !important;
+}
+
+.hover-box:hover img {
+  box-shadow: 1px 1px 10px 0 #0099cc;
+  transition: all 0.3s;
+}
+.hover-box:hover {
+  box-shadow: 0 0 10px 0 #0099cc !important;
+  transition: all 0.3s;
+}
+
+div .cursor {
+  cursor: pointer;
+}
+
+@media (max-width: 575px) {
+  .hover-box {
+    width: 80% !important;
+    text-align: center;
+    margin: auto;
+  }
+}

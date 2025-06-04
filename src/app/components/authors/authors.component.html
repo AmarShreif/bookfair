@@ -1,0 +1,58 @@
+<section>
+  <div class="container">
+    <div
+      class="input-group flex-nowrap search mx-auto animate__animated animate__delay-1s animate__fadeInDown"
+    >
+      <input
+        [(ngModel)]="titleSearch"
+        (input)="getPageTitle(titleSearch)"
+        type="search"
+        class="form-control shadow border-0 border-bottom z-0"
+        placeholder="Search By Book Name"
+        aria-label="Username"
+        aria-describedby="addon-wrapping"
+      />
+    </div>
+
+    <div class="row mt-5 g-4">
+      @for (title of pageTitle; track $index) {
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div
+          class="d-flex justify-content-center align-items-center flex-column text-center shadow mt-auto h-100 rounded-3 hover py-4 animate__animated animate__fadeInLeft animate__duration-6s animate__slow animate__delay-2s desgin"
+        >
+          <h5 class="px-2">
+            {{ title.authors[0].name.split(" ", 2).join(" ") }}
+          </h5>
+          <p>
+            {{ title.authors[0].birth_year }} <span>/</span>
+            {{ title.authors[0].death_year }}
+          </p>
+          <button
+            [routerLink]="['/authorsBook', title.id]"
+            class="btn btn-outline-primary"
+          >
+            <i class="fa-solid fa-eye me-2"></i>REVIEW
+          </button>
+        </div>
+      </div>
+      }
+      <div class="mt-5 text-center">
+        <button
+          class="btn btn-danger"
+          (click)="pervPage()"
+          (click)="decrement()"
+        >
+          perv
+        </button>
+        <span class="mx-3">{{ counter }}</span>
+        <button
+          class="btn btn-success"
+          (click)="nextPage()"
+          (click)="increment()"
+        >
+          next
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
