@@ -7,6 +7,7 @@ import { loodingInterceptor } from './interceptors/looding.interceptor';
 import { NgxSpinnerModule } from "ngx-spinner";
 
 
+
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes),
     provideHttpClient(withFetch(),withInterceptors([loodingInterceptor])),

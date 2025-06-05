@@ -42,21 +42,13 @@
         }
       </div>
       <div class="mt-5 text-center">
-        <button
-          class="btn btn-danger"
-          (click)="pervPage()"
-          (click)="decrement()"
-        >
-          perv
-        </button>
-        <span class="mx-3">{{ counter }}</span>
-        <button
-          class="btn btn-success"
-          (click)="nextPage()"
-          (click)="increment()"
-        >
-          next
-        </button>
+        <span class="cursor" (click)="pervPage()" (click)="decrement()">
+          <i class="fa-solid fa-angles-left"></i>
+        </span>
+        <span class="mx-5">{{ counter }}</span>
+        <span class="cursor" (click)="nextPage()" (click)="increment()">
+          <i class="fa-solid fa-angles-right"></i>
+        </span>
 
         <!-- 
          <i class="fa-solid cursor fa-angle-left" (click)="pervPage()"></i>

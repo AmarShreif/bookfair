@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { BooksServiceService } from '../../services/books-service.service';
 import { Ibook } from '../../interfaces/ibooks';
-import { FormsModule } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { FormGroup, FormsModule } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-allbook',
@@ -12,13 +12,12 @@ import { RouterLink } from '@angular/router';
 })
 export class AllbookComponent {
 private readonly booksServiceService = inject(BooksServiceService)
+private readonly _Router = inject(Router)
 
   bookList: Ibook[] = []
   pageNumber:number=1
   search:string=''
   counter: number = 1;
-
-  
 
 
   ngOnInit(): void {

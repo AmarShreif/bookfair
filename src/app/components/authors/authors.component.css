@@ -7,3 +7,6 @@
   box-shadow: 0 0 7px 1px #09c !important;
   transition: all 0.5s;
 }
+.cursor {
+  cursor: pointer;
+}

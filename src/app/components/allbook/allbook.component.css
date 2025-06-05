@@ -12,7 +12,7 @@
   transition: all 0.3s;
 }
 
-div .cursor {
+.cursor {
   cursor: pointer;
 }
 
